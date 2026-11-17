@@ -103,7 +103,12 @@ Mode awal mengikuti preferensi sistem, lalu disimpan di `localStorage` (`da-them
 
 ## Deploy
 
-Proyek ini statis dan bisa langsung di-deploy ke Vercel, Netlify, atau Cloudflare Pages:
+Live site: **https://alam-666.github.io/deny-alamsyah-portfolio/**
+
+Deployment otomatis ke GitHub Pages lewat `.github/workflows/deploy.yml` setiap ada push ke `main`. Workflow menyetel `VITE_BASE_PATH=/deny-alamsyah-portfolio/` agar path aset (foto, favicon, JS, CSS) tetap benar di URL subfolder.
+
+Untuk platform lain (Vercel, Netlify, Cloudflare Pages):
 
 - Build command: `npm run build`
 - Output directory: `dist`
+- Biarkan `VITE_BASE_PATH` kosong jika site di-root domain.

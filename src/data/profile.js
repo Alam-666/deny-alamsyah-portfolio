@@ -11,8 +11,9 @@ export const profile = {
   location: 'Indonesia',
   availability: 'Tersedia untuk kolaborasi & peluang baru',
 
-  // Foto profil aktif. Set null untuk kembali memakai placeholder animasi.
-  photo: '/profile.jpg',
+  // Foto profil aktif. BASE_URL menyesuaikan path saat deploy ke subfolder.
+  // Set null untuk kembali memakai placeholder animasi.
+  photo: `${import.meta.env.BASE_URL}profile.jpg`,
 
   contact: {
     email: 'dennyalamsyah80@gmail.com',
