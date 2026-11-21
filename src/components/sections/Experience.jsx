@@ -44,6 +44,7 @@ function ExperienceCard({ experience }) {
               label={experience.company}
               initials={experience.logoInitials}
               logo={experience.logo}
+              logoFit={experience.logoFit}
               className="h-14 w-14 sm:h-16 sm:w-16"
             />
             <div className="min-w-0">

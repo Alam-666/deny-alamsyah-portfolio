@@ -70,6 +70,7 @@ export const profile = {
       company: 'SJ.OFFICIAL',
       // Letakkan logo di public/logos/sj-official.png (atau ubah path-nya di sini).
       logo: `${import.meta.env.BASE_URL}logos/sj-official.png`,
+      logoFit: 'wide',
       logoInitials: 'SJ',
       role: 'Staff IT',
       period: 'Maret 2025 — April 2026',

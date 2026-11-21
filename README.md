@@ -89,9 +89,9 @@ Logo tampil sebagai badge di samping nama perusahaan pada tiap kartu pengalaman.
 | Badan Narkotika Nasional | `public/logos/bnn.jpg` |
 | Yudi Butcher E-Commerce | `public/logos/yudi-butcher.png` |
 
-Format yang didukung: PNG, SVG, WebP, atau JPG — sebaiknya transparan dan berbentuk square (rasio 1:1, minimal 256×256 px). Jika ingin nama file lain atau format berbeda, ubah field `logo` pada entitas experience di `src/data/profile.js`.
+Format yang didukung: PNG, SVG, WebP, atau JPG — sebaiknya transparan dan berbentuk square (rasio 1:1, minimal 256×256 px). Jika ingin nama file lain atau format berbeda, ubah field `logo` pada entitas experience di `src/data/profile.js`. Untuk logo melebar seperti SJ.OFFICIAL, tambahkan `logoFit: 'wide'` agar area gambarnya diperlebar; default-nya `square`.
 
-Komponen `src/components/ui/CompanyLogo.jsx` otomatis menampilkan monogram inisial (`SJ`, `BNN`, `YB`) sebagai fallback saat file belum ada atau gagal dimuat, jadi tampilan tetap rapi. Logo bersifat dekoratif karena nama perusahaan sudah tertulis sebagai teks — tidak diumumkan dua kali oleh screen reader.
+Badge mengikuti pola kartu: border adaptif, glow radial, dot aksen, dan efek hover. Logo ditampilkan abu-abu secara default lalu kembali ke warna aslinya saat kartu di-hover. Komponen `src/components/ui/CompanyLogo.jsx` otomatis menampilkan monogram inisial (`SJ`, `BNN`, `YB`) sebagai fallback saat file belum ada atau gagal dimuat, jadi tampilan tetap rapi. Logo bersifat dekoratif karena nama perusahaan sudah tertulis sebagai teks — tidak diumumkan dua kali oleh screen reader.
 
 ### 4. Formulir kontak
 
