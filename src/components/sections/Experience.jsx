@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import profile from '../../data/profile'
+import CompanyLogo from '../ui/CompanyLogo'
 import Reveal from '../ui/Reveal'
 import SectionHeading from '../ui/SectionHeading'
 import ProjectMock from '../visuals/ProjectMock'
@@ -38,8 +39,18 @@ function ExperienceCard({ experience }) {
             <span className="font-mono text-[10px] tracking-[0.12em] text-muted uppercase">{experience.type}</span>
           </div>
 
-          <h3 className="mt-5 text-2xl font-semibold tracking-[-0.03em] sm:text-[1.7rem]">{experience.role}</h3>
-          <p className="mt-1 text-sm font-medium text-accent">{experience.company}</p>
+          <div className="mt-5 flex items-center gap-4">
+            <CompanyLogo
+              label={experience.company}
+              initials={experience.logoInitials}
+              logo={experience.logo}
+              className="h-14 w-14 sm:h-16 sm:w-16"
+            />
+            <div className="min-w-0">
+              <h3 className="text-2xl font-semibold tracking-[-0.03em] sm:text-[1.7rem]">{experience.role}</h3>
+              <p className="mt-1 text-sm font-medium text-accent">{experience.company}</p>
+            </div>
+          </div>
 
           <p className="mt-4 max-w-xl text-[14px] leading-relaxed text-muted">{experience.description}</p>
 

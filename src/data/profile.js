@@ -68,6 +68,9 @@ export const profile = {
       id: 'sj-official',
       number: '01',
       company: 'SJ.OFFICIAL',
+      // Letakkan logo di public/logos/sj-official.png (atau ubah path-nya di sini).
+      logo: `${import.meta.env.BASE_URL}logos/sj-official.png`,
+      logoInitials: 'SJ',
       role: 'Staff IT',
       period: 'Maret 2025 — April 2026',
       shortPeriod: '2025 — 2026',
@@ -86,6 +89,9 @@ export const profile = {
       id: 'bnn',
       number: '02',
       company: 'Badan Narkotika Nasional (BNN)',
+      // Logo asli berformat JPG di public/logos/bnn.jpg.
+      logo: `${import.meta.env.BASE_URL}logos/bnn.jpg`,
+      logoInitials: 'BNN',
       role: 'Magang Humas',
       period: 'November — Desember 2024',
       shortPeriod: 'Nov — Des 2024',
@@ -103,6 +109,9 @@ export const profile = {
       id: 'yudi-butcher',
       number: '03',
       company: 'Yudi Butcher E-Commerce',
+      // Letakkan logo di public/logos/yudi-butcher.png (atau ubah path-nya di sini).
+      logo: `${import.meta.env.BASE_URL}logos/yudi-butcher.png`,
+      logoInitials: 'YB',
       role: 'Administrasi Online',
       period: 'Juni 2021 — Juni 2024',
       shortPeriod: '2021 — 2024',

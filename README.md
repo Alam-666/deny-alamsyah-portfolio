@@ -68,7 +68,7 @@ Semua teks, pengalaman, keahlian, dan kontak ada di `src/data/profile.js`. Setel
 
 ### 2. Foto profil
 
-Foto profil aktif tersimpan di `public/profile.jpg` dan terhubung lewat `photo: '/profile.jpg'` di `src/data/profile.js`.
+Foto profil aktif tersimpan di `public/profile.jpg` dan terhubung lewat `photo` di `src/data/profile.js` (menggunakan `import.meta.env.BASE_URL` agar path tetap benar saat deploy ke subfolder GitHub Pages).
 
 Efek yang aktif pada foto:
 
@@ -79,7 +79,21 @@ Efek yang aktif pada foto:
 
 Untuk mengganti foto, timpa `public/profile.jpg` (rasio ideal 4:5, minimal 800×1000 px). Untuk kembali ke placeholder animasi, set `photo: null`.
 
-### 3. Formulir kontak
+### 3. Logo perusahaan di pengalaman
+
+Logo tampil sebagai badge di samping nama perusahaan pada tiap kartu pengalaman. Siapkan file di folder `public/logos/` dengan nama berikut:
+
+| Perusahaan | File |
+|---|---|
+| SJ.OFFICIAL | `public/logos/sj-official.png` |
+| Badan Narkotika Nasional | `public/logos/bnn.jpg` |
+| Yudi Butcher E-Commerce | `public/logos/yudi-butcher.png` |
+
+Format yang didukung: PNG, SVG, WebP, atau JPG — sebaiknya transparan dan berbentuk square (rasio 1:1, minimal 256×256 px). Jika ingin nama file lain atau format berbeda, ubah field `logo` pada entitas experience di `src/data/profile.js`.
+
+Komponen `src/components/ui/CompanyLogo.jsx` otomatis menampilkan monogram inisial (`SJ`, `BNN`, `YB`) sebagai fallback saat file belum ada atau gagal dimuat, jadi tampilan tetap rapi. Logo bersifat dekoratif karena nama perusahaan sudah tertulis sebagai teks — tidak diumumkan dua kali oleh screen reader.
+
+### 4. Formulir kontak
 
 Formulir bekerja tanpa backend: saat dikirim, form membuka aplikasi email pengunjung dengan subjek dan isi yang sudah terisi, ditujukan ke `dennyalamsyah80@gmail.com`. Jika ingin pengiriman langsung dari website, hubungkan ke layanan seperti Formspree, Resend, atau API sendiri di `handleSubmit` (`src/components/sections/Contact.jsx`).
 
