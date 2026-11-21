@@ -90,8 +90,8 @@ export const profile = {
       id: 'bnn',
       number: '02',
       company: 'Badan Narkotika Nasional (BNN)',
-      // Logo asli berformat JPG di public/logos/bnn.jpg.
-      logo: `${import.meta.env.BASE_URL}logos/bnn.jpg`,
+      // Logo BNN versi background transparan di public/logos/bnn.png.
+      logo: `${import.meta.env.BASE_URL}logos/bnn.png`,
       logoInitials: 'BNN',
       role: 'Magang Humas',
       period: 'November — Desember 2024',

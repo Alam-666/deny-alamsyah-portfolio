@@ -86,7 +86,7 @@ Logo tampil sebagai badge di samping nama perusahaan pada tiap kartu pengalaman.
 | Perusahaan | File |
 |---|---|
 | SJ.OFFICIAL | `public/logos/sj-official.png` |
-| Badan Narkotika Nasional | `public/logos/bnn.jpg` |
+| Badan Narkotika Nasional | `public/logos/bnn.png` |
 | Yudi Butcher E-Commerce | `public/logos/yudi-butcher.png` |
 
 Format yang didukung: PNG, SVG, WebP, atau JPG — sebaiknya transparan dan berbentuk square (rasio 1:1, minimal 256×256 px). Jika ingin nama file lain atau format berbeda, ubah field `logo` pada entitas experience di `src/data/profile.js`. Untuk logo melebar seperti SJ.OFFICIAL, tambahkan `logoFit: 'wide'` agar area gambarnya diperlebar; default-nya `square`.
